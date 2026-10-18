@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "indic-pdf-check"
-version = "0.1.0"
+version = "0.2.0"
 description = "Can a screen reader, search engine or AI read this PDF? Detects scanned and broken text layers in Indian and South/Southeast Asian script PDFs."
 readme = "README.md"
 license = {text = "Apache-2.0"}
