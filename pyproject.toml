@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indic-pdf-check"
+version = "0.1.0"
+description = "Can a screen reader, search engine or AI read this PDF? Detects scanned and broken text layers in Indian and South/Southeast Asian script PDFs."
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [{name = "Novain Shibu", email = "georgeshibu380@gmail.com"}]
+requires-python = ">=3.9"
+dependencies = ["pymupdf>=1.23"]
+keywords = ["pdf", "accessibility", "screen reader", "indic", "unicode", "malayalam", "hindi", "tamil", "khmer", "myanmar"]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: Apache Software License",
+               "Topic :: Text Processing", "Intended Audience :: Developers"]
+
+[project.urls]
+Homepage = "https://github.com/novain-shibu/indic-pdf-check"
+"Research report" = "https://github.com/novain-shibu/finepdfs-audit"
+
+[project.scripts]
+indic-pdf-check = "indic_pdf_check.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
