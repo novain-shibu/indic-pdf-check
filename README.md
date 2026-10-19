@@ -23,7 +23,7 @@ notice.pdf:   NO_TEXT            script=None letters=0 broken=0.0% tagged=False 
 | `NO_TEXT` | almost no text at all: usually a scan or an image | run OCR (e.g. OCRmyPDF with Tesseract language packs) before publishing |
 | `INSUFFICIENT_TEXT` | some text in a supported script, but under 200 letters: too little to judge | check by hand (e.g. a short notice) |
 | `UNSUPPORTED_SCRIPT` | plenty of text, but none in a supported script (e.g. English only) | this tool cannot judge it |
-| `BROKEN` | the main script, or any other supported script with 200+ letters, has more than 5% impossible spellings (e.g. a vowel sign or virama with no consonant before it) | re-export with another tool and check again; for Word-made PDFs a decoder can recover the text |
+| `BROKEN` | the main script, or any other supported script with 200+ letters, has more than 5% impossible spellings (e.g. a vowel sign or virama with no consonant before it) | re-export with another tool and check again; or recover the text with [Unshape](https://github.com/novain-shibu/unshape) (needs the document's original font) |
 | `OK` | no problem detected by these checks | - (this is not a full accessibility check: reading order, headings, tables and alternative text are not checked) |
 
 Pages whose own text has a high share of impossible spellings are listed as `suspicious_pages` (with `--json`), so damage
