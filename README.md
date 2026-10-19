@@ -7,6 +7,8 @@ search, screen readers and AI pipelines get garbled words. Microsoft Word's "Sav
 [research report](https://github.com/novain-shibu/finepdfs-audit)). Others are scans with no text at all. This tool reads a
 PDF's own text layer and tells you which case you have, in a second, on your own computer.
 
+**Next steps after `BROKEN`:** recover the text with [Unshape](https://github.com/novain-shibu/unshape); verify that extracted text matches what people see with [SeenRead](https://github.com/novain-shibu/seenread).
+
 ```bash
 pip install git+https://github.com/novain-shibu/indic-pdf-check
 indic-pdf-check circular.pdf notice.pdf
